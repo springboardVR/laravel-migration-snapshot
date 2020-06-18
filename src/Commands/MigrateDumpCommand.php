@@ -238,7 +238,7 @@ final class MigrateDumpCommand extends Command
         // Excluding any hash or date suffix since only current is relevant.
 
         return 'mysqldump --routines --skip-add-drop-table'
-            . ' --skip-add-locks --skip-comments --skip-set-charset --tz-utc --set-gtid-purged=OFF'
+            . ' --skip-add-locks --skip-comments --skip-set-charset --tz-utc'
             . ' --host=' . escapeshellarg($db_config['host'])
             . ' --port=' . escapeshellarg($db_config['port'])
             . ' --user=' . escapeshellarg($db_config['username'])
